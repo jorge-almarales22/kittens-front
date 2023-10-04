@@ -4,7 +4,7 @@ export const Cat = ({ kitten }) => {
     return (
         <div className="card">
             <div className="card-header">
-                <img src={kitten.photo} alt="Cat" />
+                <img src={`http://localhost:4000/images/${kitten.imageFileName}`} alt="Cat" />
             </div>
             <div className="card-body">
                 <h5 className="card-title">{kitten.name}</h5>
