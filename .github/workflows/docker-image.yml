@@ -57,4 +57,4 @@ jobs:
 
       - name: build and push the Docker image to Digital Ocean
         run: |
-          docker build -t registry.digitalocean.com/kittens/jeada22/kittens --push .
+          docker build -t registry.digitalocean.com/kittens/${{  secrets.DOCKER_USERNAME }}/kittens --push .
