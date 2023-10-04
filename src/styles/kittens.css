@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+body{
+    background: #6499E9;
+}
+.title{
+    font-size: 58px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.container
+{
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.cont-skeleton{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 500px;
+    padding: 30px;
+    background: #E5CFF7;
+    border-radius: 10px;
+}
+
+.card-header{
+    max-width: 500px;
+}
+
+.card-header img{
+    width: 100%;
+    height: 271px;
+}
+
+.card-title{
+
+    font-weight: bold;
+    font-size: 41px;
+    margin: 10px 0;
+}
+
+.card-text{
+
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.btn-go{
+    height: 57px;
+    background: #9D76C1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    margin: 25px 0;
+    font-size: 18px;
+    transition: all 0.2s ease-in-out; 
+}
+
+.btn-go:hover{
+    background: #F78CA2;
+    color: #fff;
+}
+
+.rotate-vert-center {
+	-webkit-animation: rotate-vert-center 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) 100 both;
+	        animation: rotate-vert-center 3s cubic-bezier(0.455, 0.030, 0.515, 0.955) 100 both;
+            font-size: 100px;
+}
+
+@-webkit-keyframes rotate-vert-center {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotate-vert-center {
+    0% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    100% {
+        -webkit-transform: rotateY(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.detailed-card{
+    width: 900px !important;
+}
+
+.header-detailed{
+    margin: 0 auto;
+}
+
+.header-detailed img{
+    border-radius: 10px;
+}
+
+.bold{
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 23px;
+    
+}
+
+.title-detailed{
+    font-size: 65px;
+}
+
+@media screen and (min-width: 1500px) {
+    
+    .card{
+        width: 480px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .card-header img{
+        height: 190px;
+    }
+    .card-title{
+        font-size: 35px;
+    }
+    .card-text{
+        font-size: 16px;
+    }
+    .btn-go{
+        height: 46px;
+        font-size: 16px;
+    }
+}
