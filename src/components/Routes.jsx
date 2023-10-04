@@ -9,6 +9,7 @@ export const RoutesApp = () => {
 
                 <Route path="/" element={<Home/>}></Route>
                 <Route path="/cat/:id" element={<DetailCat/>}></Route>
+                <Route path="/*" element={<Home/>}></Route>
 
             </Routes>
         </>
