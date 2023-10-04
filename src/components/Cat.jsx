@@ -9,7 +9,7 @@ export const Cat = ({ kitten }) => {
             <div className="card-body">
                 <h5 className="card-title">{kitten.name}</h5>
                 <p className="card-text">{kitten.description}</p>
-                <Link to={`/cat/${kitten.id}`} className="btn-go">Go somewhere</Link>
+                <Link to={`/cat/${kitten.id}`} className="btn-go">I love it</Link>
             </div>
         </div>
     )
