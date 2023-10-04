@@ -38,23 +38,23 @@ jobs:
           echo "Nueva version $NEW_VERSION"
           
 
-      # - name: Build the Docker image
-      #   env:
-      #     NEW_VERSION: ${{ steps.version.outputs.version }}
-      #   run: |
-      #     docker build -t jeada22/kittens:$NEW_VERSION .
-      #     docker build -t jeada22/kittens:latest .
+      - name: Build the Docker image
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          docker build -t jeada22/kittens:$NEW_VERSION .
+          docker build -t jeada22/kittens:latest .
           
-      # - name: Push the Docker image
-      #   env:
-      #     NEW_VERSION: ${{ steps.version.outputs.version }}
-      #   run: |
-      #     docker push jeada22/kittens:$NEW_VERSION
-      #     docker push jeada22/kittens:latest
+      - name: Push the Docker image
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          docker push jeada22/kittens:$NEW_VERSION
+          docker push jeada22/kittens:latest
 
       - name: Login to Digital Ocean Registry
         run: echo "${{ secrets.DOCKER_REGISTRY_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_REGISTRY_USERNAME }}" --password-stdin registry.digitalocean.com
 
       - name: build and push the Docker image to Digital Ocean
         run: |
-          docker build -t registry.digitalocean.com/kittens/${{  secrets.DOCKER_USERNAME }}/kittens --push .
+          docker build -t registry.digitalocean.com/kittens/jeada22/kittens --push .
