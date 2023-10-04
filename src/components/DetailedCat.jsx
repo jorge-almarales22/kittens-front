@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom"
+import { useKittenHook } from "../hooks/useKittenHook"
 
 export const DetailedCat = ({ kitten }) => {
+
+    const { urlImages } = useKittenHook()
     return (
         <div className="card detailed-card">
             <div className="card-header header-detailed">
-                <img src={`http://localhost:4000/images/${kitten.imageFileName}`} alt="Cat" />
+                <img src={`${urlImages}/${kitten.imageFileName}`} alt="Cat" />
             </div>
             <div className="card-body body-detailed">
                 <h5 className="card-title title-detailed">{kitten.name}</h5>
