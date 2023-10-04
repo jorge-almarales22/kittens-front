@@ -74,6 +74,7 @@ body{
     margin: 25px 0;
     font-size: 18px;
     transition: all 0.2s ease-in-out; 
+    cursor: pointer;
 }
 
 .btn-go:hover{

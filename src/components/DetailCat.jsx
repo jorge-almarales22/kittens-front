@@ -1,10 +1,10 @@
-import { useKitten } from "../hooks/useKitten";
 import { Skeleton } from "./Skeleton";
 import { DetailedCat } from "./DetailedCat";
+import { useSelector } from "react-redux";
 
 export const DetailCat = () => {
 
-   const { kitten } = useKitten();
+   const kitten = useSelector(state => state.kittens.kitten)
 
    return (
       <div className="container justify-content-center">
