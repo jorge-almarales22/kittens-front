@@ -38,3 +38,16 @@ jobs:
           echo "Nueva version $NEW_VERSION"
           
 
+      - name: Build the Docker image
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          docker build -t jeada22/kittens:$NEW_VERSION .
+          docker build -t jeada22/kittens:latest .
+          
+      - name: Push the Docker image
+        env:
+          NEW_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          docker push jeada22/kittens:$NEW_VERSION
+          docker push jeada22/kittens:latest
